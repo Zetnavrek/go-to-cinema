@@ -27,6 +27,8 @@ Interactua con la usuaria para poder:
         * Mostrar en consola los títulos 
         de las películas con el género 
         seleccionado por la usuaria.
+        * Si no se encuentra el género, darle un mensaje de error a la 
+        usuaria sobre su búsqueda
 #### Ninja points
 1. Filtrar películas por horario
     - Alcances:
