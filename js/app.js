@@ -29,49 +29,36 @@ var peliculas = [
     }
 ];
 var filtrarGenero = function(gen){
-    var peliculasFiltradas = [];
-    for(var i = 0; i < peliculas.length; i+=1){
-        // console.log(peliculas[i]);
-        //Obtener el genero de cada película.
-        var peliGenero = peliculas[i].genero;
-        if(peliGenero === gen){
-            peliculasFiltradas.push(peliculas[i]);
-        }
-    }
-    return (peliculasFiltradas.length > 0) ? peliculasFiltradas: 'No hay peliculas de ese género en cartelera';
+    // hint: al final, debería regresar un arreglo con las peliculas filtradas por género o un texto de error
 };
 var verCartelera = function(pelis){
-    // recorrer el arreglo de películas. 
-    console.log(pelis);
-    for(var i = 0; i < pelis.length; i+=1){
-        console.log(pelis[i]);
-        //pelis[i] muestra cada uno de los elementos del arreglo películas, estos elementos son objetos.
-        var horariosPelicula = pelis[i]["horario funciones"].toString();
-        var protagonistasPelicula = pelis[i]['protagonistas'].toString();
-        var infoPelicula = pelis[i].titulo +'\n'+pelis[i].genero+'\n'+pelis[i].director+'\n'+horariosPelicula+'\n'+protagonistasPelicula;
-        console.log(infoPelicula);
-    }
-    return infoPelicula;
+    // hint: Por cada película ingresada a través del argumento 'pelis' debo mostrar toda la información disponible
+    return true;
 };
+// Ninja Points
+// filtrar por horarios
 var obtenerHorarios = function(){
     return true;
 };
+// Interfaz :) 
 
 
+// Zona de ejecuciones :)
 alert('Bienvenida a GoToCinema');
-var accion = confirm('Desea realizar alguna acción con nuestros servicios', 'sí','no');
+
+var accion = confirm('Desea realizar alguna acción con nuestros servicios');
 
 do{
     if(accion === true){
         var opcion = parseInt(prompt('ingresa una opcion \n\n 1. Ver cartelera \n\n 2. Filtrar por género'))
         switch(opcion){
             case 1: 
-                verCartelera(peliculas);
+                // hint: ejecución de verCartelera
                 break;
             case 2: 
-                var genero = prompt('Ingresa el nombre del género que deseas filtrar').toLowerCase();
-                var pelisFiltradas = filtrarGenero(genero);
-                (Array.isArray(pelisFiltradas)) ? verCartelera(pelisFiltradas) : console.log(pelisFiltradas);
+                // hint: Obtener el genero deseado por la usuaria.
+                // hint: ejecución de filtrarGenero con el género deseado por la usuaria.
+                // hint: Debería poder reutilizar la función verCartelera para mostrar las pelis filtradas. 
                 break;
             default:
                 alert('no se ingreso una opción valida.')
@@ -80,5 +67,5 @@ do{
     }else{
         alert('vuelve pronto');
     }
-    accion = confirm('Continuar utilizando GoToCinema');
+    accion = confirm('Deseas continuar utilizando GoToCinema?');
 }while(accion === true)
