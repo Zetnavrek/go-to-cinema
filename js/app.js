@@ -51,11 +51,12 @@ var verCartelera = function(pelis){
         var infoPelicula = pelis[i].titulo +'\n'+pelis[i].genero+'\n'+pelis[i].director+'\n'+horariosPelicula+'\n'+protagonistasPelicula;
         console.log(infoPelicula);
     }
-    return pelis; 
+    return infoPelicula;
 };
 var obtenerHorarios = function(){
     return true;
 };
+
 
 alert('Bienvenida a GoToCinema');
 var accion = confirm('Desea realizar alguna acción con nuestros servicios', 'sí','no');
